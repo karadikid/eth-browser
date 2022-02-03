@@ -1,0 +1,28 @@
+{
+  "name": "eth-browser",
+  "version": "1.0.0",
+  "description": "A frontend to familiarize with JSON-RPC for Ethereum",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ethers": "^5.5.4",
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karadikid/eth-browser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karadikid/eth-browser/issues"
+  },
+  "homepage": "https://github.com/karadikid/eth-browser#readme"
+}
