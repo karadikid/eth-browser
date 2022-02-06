@@ -26,7 +26,6 @@ app.post('/balance', async (req, res) => {
 app.post('/block', async (req, res) => {
   const { address} = req.body;
   data = await returnBlock();
-  console.log(data);
   res.send({ block: data });
 });
 
