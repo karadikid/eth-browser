@@ -13,6 +13,7 @@
     "@drizzle/store": "^1.5.3",
     "cors": "^2.8.5",
     "ethereum-cryptography": "^1.0.0-rc1",
+    "ethers": "^5.5.4",
     "express": "^4.17.1"
   }
 }
