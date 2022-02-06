@@ -1,8 +1,9 @@
 const { sha256 } = require("ethereum-cryptography/sha256");
 const secp = require("ethereum-cryptography/secp256k1");
 const { hexToBytes, concatBytes, toHex, utf8ToBytes } = require("ethereum-cryptography/utils");
-const { providers, eth_getBalance, utils } = require("ethers");
+const { providers, eth_getBalance, utils, getBlock } = require("ethers");
 const { action } = require("commander");
+const { blockSize } = require("tar");
 require('dotenv').config()
 
 
@@ -25,10 +26,16 @@ async function getTransactions(address){
         console.log(transactions);
 }
 
+async function returnBlock(){
+        const data = await provider.getBlock();
+        return data;
+}
+
 module.exports = {
     returnBalance,
     getNonce,
     getTransactions,
+    returnBlock,
   };
 
 

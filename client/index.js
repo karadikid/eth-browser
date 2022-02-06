@@ -18,7 +18,21 @@ document.getElementById("get-balance").addEventListener('click', () => {
     document.getElementById("nonce").innerHTML = nonce;
   });
 });
+document.getElementById("get-block").addEventListener('click', () => {
+  const address = document.getElementById("logs-address").value;
 
+  const body = JSON.stringify({
+    address 
+  });
+
+  const request = new Request(`${server}/block`, { method: 'POST' });
+
+  fetch(request, { headers: { 'Content-Type': 'application/json' }}).then(response => {
+    return response.json();
+  }).then(({ block }) => {
+    document.getElementById("data").innerHTML = JSON.stringify(block, 4);
+  });
+});
 
 
 document.getElementById("get-logs").addEventListener('click', () => {
