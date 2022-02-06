@@ -13,9 +13,7 @@ Instructions:
 9. Enter Public Key for corresponding etherum public address from Metamask or other wallet.
 10. Click button for Get-Balance
 11. Note balance.
+12. NOTE: Log functionality not fully implemented yet. API call parameters and KEY needed.
+13. NOTE: Need to place your json-rpc URL in a .env in the root of the project.
 
 ![Web Page](FrontEnd-Screenshot.jpg)
-
-<!-- ![Alavaro's Solution](Alvaraos-Solution.jpg) -->
-<!-- [Instructors Solution](https://github.com/AlvaroLuken/exchange-secp256k1) -->
-
