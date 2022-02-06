@@ -25,9 +25,9 @@ app.post('/balance', async (req, res) => {
 
 app.post('/logs', async (req, res) => {
   const { address} = req.body;
-  let logs = await getTransactions(address);
-  console.log(logs);
-  res.send({ log: logs });
+  // let logs = await getTransactions(address);
+  // console.log(logs);
+  // res.send({ log: logs }); - Not implemented yet, need to update API call parameters in operatons.js
 });
 
 app.listen(port, () => {
