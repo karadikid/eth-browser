@@ -5,7 +5,7 @@ const port = 3042;
 const { sha256 } = require("ethereum-cryptography/sha256");
 const secp = require("ethereum-cryptography/secp256k1");
 const { hexToBytes, concatBytes, toHex, utf8ToBytes } = require("ethereum-cryptography/utils");
-const { returnBalance } = require("./libs/operations");
+const { returnBalance, getNonce } = require("./libs/operations");
 
 
 // localhost can have cross origin errors
@@ -18,8 +18,9 @@ app.use(express.json());
 app.post('/balance', async (req, res) => {
   const {address} = req.body;
   let balances = await returnBalance(address);
-  console.log(balances);
-  res.send({ balance: balances }); 
+  let nonces = await getNonce(address);
+  console.log(balances, nonces);
+  res.send({ balance: balances, nonce: nonces }); 
 });
 
 app.post('/send', async (req, res) => {

@@ -14,8 +14,14 @@ async function returnBalance(address){
         return balances;
 }
 
+async function getNonce(address){
+        const nonce = await provider.getTransactionCount(address);
+        return nonce;
+}
+
 module.exports = {
     returnBalance,
+    getNonce,
   };
 
 

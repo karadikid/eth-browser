@@ -15,8 +15,9 @@ document.getElementById("get-balance").addEventListener('click', () => {
 
   fetch(request, { headers: { 'Content-Type': 'application/json' }}).then(response => {
     return response.json();
-  }).then(({ balance }) => {
+  }).then(({ balance, nonce }) => {
     document.getElementById("balance").innerHTML = balance;
+    document.getElementById("nonce").innerHTML = nonce;
   });
 });
 
