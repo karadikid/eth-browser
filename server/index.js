@@ -15,9 +15,10 @@ app.use(express.json());
 
 
 
-app.post('/balance', (req, res) => {
+app.post('/balance', async (req, res) => {
   const {address} = req.body;
-  let balances = returnBalance(address);
+  let balances = await returnBalance(address);
+  console.log(balances);
   res.send({ balance: balances }); 
 });
 

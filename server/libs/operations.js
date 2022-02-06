@@ -10,9 +10,7 @@ const provider = new providers.AlchemyProvider("rinkeby")
 
 async function returnBalance(address){  
         const balance = await provider.getBalance(address);
-        console.log(balance);
         const balances = await utils.formatEther(balance);
-        console.log(balances);
         return balances;
 }
 
