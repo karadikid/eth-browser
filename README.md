@@ -1,4 +1,4 @@
-# ECDSA-Exchange
+# ETH-BROWSER
 This simple parcel and node application takes an etherum address as input and returns data from the blockchain about its status.
 
 Instructions:
